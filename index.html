@@ -41,8 +41,34 @@
              Through SNDS, the vision is a global CDN-inspired infrastructure utilizing NDN, resonating with the objectives of the NGI initiative, 
              thereby pioneering a forward-thinking, human-centric Next Generation Internet. With the joint expertise of EU's AUEB and US's UM teams, 
              SNDS endeavors to redefine the digital content landscape, emphasizing content identification, security, and verifiable credentials. 
-        </p> 
+          </p> 
         </div>
+
+        <div class="row p-3">
+          <h2>SNDS Design Overview</h2>
+          <p>
+            The SNDS architecture introduces a sophisticated networking platform where Next Generation technologies 
+            are exploited in order to enhance the quality and quantity of services offered by CDNs.
+            An overview of the SNDS design and the technologies that compose the SNDS ecosystem are presented in the following figure. 
+          </p>
+          <img src="img/snds_arch.jpg" class="img-fluid" style="width: 80%; height: auto;">
+          <p>
+            For clarity of purposes and without loss of generality, the figure assumes
+            a simple topology of two IP-based end-users: a content consumer, who requests a piece of information, and a content provider,
+            who supplies a piece of information. The two end-users transfer content through the NDN-based CDN network. 
+            The design proposes an incremental deployment scheme where the core CDN network is NDN-enabled and the end-users are in typicall 
+            IP-based networks. The interfacing of the two networks takes place at the NDN edge routers, which also host the SNDS service.
+          </p>
+          <p>  
+            The SNDS service is the cornerstone of the SNDS architecture. First, it performs proxying duties; it receives, translates, 
+            and forwards requests from the IP end-users to the NDN core network and vice versa. Second, it supports the <strong>NGSI-LD API</strong>, 
+            thus being able to serve the NGSI-LD requests sent by the end-users. Third, it dynamically creates, relocates, or removes individual 
+            <strong>Digital Twins (DTs)</strong> per content provider, therefore assisting provider mobility and information updates. 
+            Fourth, it incorporates the required security methods, namely, <strong>Decentralized Identifiers (DIDs)</strong>, 
+            <strong>Verifiable Credentials (VCs)</strong>, and <strong>BBS+ signtures</strong>. 
+          </p>
+        </div>
+
         <div class="row p-3">
           <h2>News</h2>
           <ul class="m-3">
